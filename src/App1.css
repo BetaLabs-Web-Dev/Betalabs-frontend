@@ -1,0 +1,253 @@
+.meet_team1{
+    display: flex;
+    flex-direction: row;
+    width: 1600px;
+    height: 800px;
+    margin-left: 18rem;
+  }
+  body{
+    background-color: black;
+    width: 1620px;
+    margin-top: 5rem;
+  }
+  .heading1{
+    margin-left: 55%;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    font-size: 66px;
+    line-height: 89.43px;
+    letter-spacing: 5%;
+    color: #A5A5A5;
+  }
+  .t1{
+    background-image: url("C:\Users\HP\OneDrive\Desktop\frontend exs\ca-app\public\sx\t1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+  }
+  .t1:hover{
+    transition: all;
+    scale: 1.2;
+  }
+  .dets1{
+    background: rgba(0, 0, 0, 0.7);
+    width: 400px;
+    height: 800px;
+    background-size: cover;
+  }
+  .pos1{
+    margin: 80% 0% 0% 20%;
+    font-size: 20px;
+    width: 200px;
+    height: 50px;
+  }
+  .name1{
+    font-size: xx-large;
+    margin-top: 40%;
+    font-size: 400%;
+    margin-bottom: 0%;
+  }
+  .des1{
+    color: red;
+    font-size: xx-large;
+    margin-top: 0%;
+  }
+  .icon1{
+    color: white;
+    border-radius: 80%;
+    margin-top: 23%;
+    background-color: aquamarine;
+    width: 70px;
+    height: 60px;
+  }
+  .icon2{
+    color: white;
+    border-radius: 50%;
+    margin-top: 23%;
+    background-color: aquamarine;
+    width: 60px;
+    height: 60px;
+  }
+  .t2{
+    background-image: url("C:\Users\HP\OneDrive\Desktop\frontend exs\ca-app\public\sx\t2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+  }
+  .t2:hover{
+    transition: all;
+    scale: 1.2;
+  }
+  .dets2{
+    background: rgba(0, 0, 0, 0.7);
+    width: 400px;
+    height: 800px;
+    background-size: cover;
+  }
+  .pos2{
+    margin: 80% 0% 0% 20%;
+    font-size: 20px;
+    width: 200px;
+    height: 50px;
+  }
+  .name2{
+    font-size: xx-large;
+    margin-top: 40%;
+    font-size: 400%;
+    margin-bottom: 0%;
+  }
+  .des2{
+    color: red;
+    font-size: xx-large;
+    margin-top: 0%;
+  }
+  .t3{
+    background-image: url("C:\Users\HP\OneDrive\Desktop\frontend exs\ca-app\public\sx\t3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+  }
+  .t3:hover{
+    transition: all;
+    scale: 1.2;
+  }
+  .dets3{
+    background: rgba(0, 0, 0, 0.7);
+    width: 400px;
+    height: 800px;
+    background-size: cover;
+  }
+  .pos3{
+    margin: 80% 0% 0% 20%;
+    font-size: 20px;
+    width: 200px;
+    height: 50px;
+  }
+  .name3{
+    font-size: xx-large;
+    margin-top: 40%;
+    font-size: 400%;
+    margin-bottom: 0%;
+  }
+  .des3{
+    color: red;
+    font-size: xx-large;
+    margin-top: 0%;
+  }
+  .t4{
+    background-image: url("C:\Users\HP\OneDrive\Desktop\frontend exs\ca-app\public\sx\t4.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+  }
+  .t4:hover{
+    transition: all;
+    scale: 1.2;
+  }
+  .dets4{
+    background: rgba(0, 0, 0, 0.7);
+    width: 400px;
+    height: 800px;
+    background-size: cover;
+  }
+  .pos4{
+    margin: 80% 0% 0% 20%;
+    font-size: 20px;
+    width: 200px;
+    height: 50px;
+  }
+  .name4{
+    font-size: xx-large;
+    margin-top: 40%;
+    font-size: 400%;
+    margin-bottom: 0%;
+  }
+  .des4{
+    color: red;
+    font-size: xx-large;
+    margin-top: 0%;
+  }
+  .heading2{
+    margin-left:63%;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    font-size: 66px;
+    line-height: 89.43px;
+    letter-spacing: 5%;
+    color: #A5A5A5;
+  }
+  .events{
+    width: 1372px; 
+    height: 406px;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr;
+    grid-column-gap: 30%;
+    align-items: center;
+    justify-content: center;
+    margin-left: 40%;
+  }
+  .event1{
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+  }
+  .icon3{
+    color: greenyellow;
+    font-weight: 900;
+  }
+  .no1{
+    color: white;
+    font-weight: 500;
+    font-size: 500%;
+  }
+  .edets1{
+    color: white;
+    display: block;
+  }
+  .event2{
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+  }
+  .icon4{
+    color: blue;
+    font-weight: 500;
+  }
+  .no2{
+    color: white;
+    font-weight: 00;
+    font-size: 500%;
+  }
+  .edets2{
+    color: white;
+  }
+  .event3{
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+  }
+  .icon5{
+    color: purple;
+    font-weight: 500;
+  }
+  .no3{
+    color: white;
+    font-weight: 500;
+    font-size: 500%;
+  }
+  .edets3{
+    color: white;
+  }
+  
