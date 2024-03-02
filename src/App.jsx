@@ -1,10 +1,12 @@
 import './App.css';
-import Home from './pages/Home';
+import NavBar from './components/NavBar/NavBar';
+import Home from './pages/Home/Home';
 
 const App = () => {
   return (
-    <div>
-      <Home />
+    <div className='h-[100vw] bg-black font-poppins'>
+      <NavBar />
+      <Home /> 
     </div>
   )
 }
