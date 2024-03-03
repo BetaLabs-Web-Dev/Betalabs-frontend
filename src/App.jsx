@@ -4,7 +4,7 @@ import Home from './pages/Home/Home';
 
 const App = () => {
   return (
-    <div className='h-[100vw] bg-black font-poppins'>
+    <div className='bg-black font-poppins'>
       <NavBar />
       <Home /> 
     </div>

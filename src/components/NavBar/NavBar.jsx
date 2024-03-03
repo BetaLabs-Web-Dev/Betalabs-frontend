@@ -12,7 +12,7 @@ const NavBar = () => {
         <div className="text-base font-medium tracking-[0.3rem] text-custom-red">
             <a href='/' className={HoverEffectWhite}>BETA LABS</a>
         </div>
-        <div className="text-white ml:hidden lg:hidden">
+        <div className="text-white cursor-pointer ml:hidden lg:hidden">
             <MenuIcon />
         </div>
         <div className="hidden font-medium text-white ml:flex lg:flex ml:gap-3.5 ml:text-xl lg:gap-7 lg:text-2xl">
