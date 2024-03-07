@@ -1,16 +1,16 @@
 import "./App.css";
-import NavBar from "./components/NavBar/NavBar";
 import Home from "./pages/Home/Home";
 import Projects from "./components/Carousel/Projects";
-import { Footer } from "./components/Footer/Footer";
+import MeetTheTeam from "./components/MeetTheTeam/MeetTheTeam";
+import GetInTouch from "./components/GetInTouch/GetInTouch";
 
 const App = () => {
   return (
     <div className="bg-black font-poppins">
-      <NavBar />
       <Home />
+      <MeetTheTeam />
       <Projects />
-      <Footer />
+      <GetInTouch />
     </div>
   );
 };
