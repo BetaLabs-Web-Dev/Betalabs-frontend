@@ -1,51 +1,112 @@
-import React from 'react'
-import SearchIcon from '@mui/icons-material/Search';
-import SortIcon from '@mui/icons-material/Sort';
-import FiberManualRecordRoundedIcon from '@mui/icons-material/FiberManualRecordRounded';
-import MenuIcon from '@mui/icons-material/Menu';
+import { Fragment } from "react";
+import { Disclosure, Menu, Transition } from "@headlessui/react";
+import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 
-const NavBar = () => {
-    const HoverEffectRose = "hover:text-custom-red  hover:scale-105 hover:-translate-y-1 transition-transform duration-200 ease-in-out";
-    const HoverEffectWhite = "hover:text-white  hover:scale-105 hover:-translate-y-1 transition-transform duration-200 ease-in-out";
-  return (
-    <div className='flex justify-between p-8 font-poppins'>
-        <div className="text-base font-medium tracking-[0.3rem] text-custom-red">
-            <a href='/' className={HoverEffectWhite}>BETA LABS</a>
-        </div>
-        <div className="text-white cursor-pointer ml:hidden lg:hidden">
-            <MenuIcon />
-        </div>
-        <div className="hidden font-medium text-white ml:flex lg:flex ml:gap-3.5 ml:text-xl lg:gap-7 lg:text-2xl">
-            <a href='/home' className={HoverEffectRose}>
-                Home
-            </a>
-        
-            <a href='/events' className={HoverEffectRose}>
-                Events
-            </a>
-            <a href='/aboutus' className={HoverEffectRose}>
-                About Us
-            </a>
-            <a href='/contactus' className={HoverEffectRose}>
-                Contact Us
-            </a>
-            <a href='Gallery' className={HoverEffectRose}>
-                Gallery
-            </a>
-        </div>
-        <div className="hidden ml:flex lg:flex ml:gap-7 lg:gap-14">
-            <div className="flex ml:gap-2 lg:gap-4 ">
-                <button className='text-white'><SearchIcon sx={{fontSize:"1.8rem"}}  /></button>
-                <button style={{ transform: "scaleX(-1)"}} className=' text-custom-red'><SortIcon sx={{fontSize:"1.8rem"}} /></button>
-            </div>
-                <div className="flex gap-1 text-base text-custom-red">  
-                    <button className={HoverEffectWhite}>En</button>
-                    <div className="self-end text-custom-red"><FiberManualRecordRoundedIcon sx={{fontSize:"0.8rem"}} /></div>
-                    <button className={HoverEffectWhite}>Hi</button>
-                </div>
-            </div>
-            </div>  
-  )
+const navigation = [
+  { name: "Home", href: "#", current: true },
+  { name: "About Us", href: "#", current: false },
+  { name: "Events", href: "#", current: false },
+  { name: "Projects", href: "#", current: false },
+  { name: "Gallery", href: "#", current: false },
+  { name: "Contact Us", href: "#", current: false },
+];
+
+function classNames(...classes) {
+  return classes.filter(Boolean).join(" ");
 }
 
-export default NavBar
+export default function Example() {
+  return (
+    <Disclosure as="nav" className="">
+      {({ open }) => (
+        <>
+          <div className="mx-auto px-2 sm:px-6 lg:px-8">
+            <div className="relative flex h-16 items-center justify-between">
+              <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                {/* Mobile menu button*/}
+                <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                  <span className="absolute -inset-0.5" />
+                  <span className="sr-only">Open main menu</span>
+                  {open ? (
+                    <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
+                  ) : (
+                    <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
+                  )}
+                </Disclosure.Button>
+              </div>
+
+              <div className="flex flex-shrink-0 items-center">
+                <img
+                  className="h-13 w-auto"
+                  src="./betalabsLogo.png"
+                  alt="Your Company"
+                />
+                <h3 className="mx-5" style={{ color: "white" }}>
+                  BETA LABS
+                </h3>
+              </div>
+
+              <div
+                style={{ backgroundColor: "#01022C", borderRadius: "30px" }}
+                className="hidden sm:ml-6 sm:block sm:rounded-bl-full"
+              >
+                <div className="flex space-x-4 rounded-bl-full">
+                  {navigation.map((item) => (
+                    <a
+                      key={item.name}
+                      href={item.href}
+                      style={
+                        item.current
+                          ? { color: "#ED4951", borderRadius: "30px" }
+                          : { borderRadius: "30px" }
+                      }
+                      className={classNames(
+                        item.current
+                          ? "bg-gray-900 text-white"
+                          : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                        "rounded-md px-5 py-4 text-xl font-medium"
+                      )}
+                      aria-current={item.current ? "page" : undefined}
+                    >
+                      {item.name}
+                    </a>
+                  ))}
+                </div>
+              </div>
+
+              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                <a
+                  href="#"
+                  className="customBtn rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                >
+                  Sign Up
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <Disclosure.Panel className="sm:hidden">
+            <div className="space-y-1 px-2 pb-3 pt-2">
+              {navigation.map((item) => (
+                <Disclosure.Button
+                  key={item.name}
+                  as="a"
+                  href={item.href}
+                  className={classNames(
+                    item.current
+                      ? "bg-gray-900 text-white"
+                      : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                    "block rounded-md px-3 py-2 text-base font-medium"
+                  )}
+                  aria-current={item.current ? "page" : undefined}
+                >
+                  {item.name}
+                </Disclosure.Button>
+              ))}
+            </div>
+          </Disclosure.Panel>
+        </>
+      )}
+    </Disclosure>
+  );
+}

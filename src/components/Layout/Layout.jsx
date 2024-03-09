@@ -6,9 +6,9 @@ class Layout extends React.Component {
   render() {
     return (
       <>
-        <NavBar />
+        {/* <NavBar /> */}
         <main>{this.props.children}</main>
-        <Footer />
+        {/* <Footer /> */}
       </>
     );
   }
