@@ -20,9 +20,9 @@ export default function Example() {
     <Disclosure as="nav" className="">
       {({ open }) => (
         <>
-          <div className="mx-auto p-2 sm:px-6 lg:px-8 fixed w-full z-10">
+          <div className="mx-auto p-2 sm:px-6 lg:px-8 fixed w-full z-10 bg-[#000E19]">
             <div className="relative flex h-16 items-center justify-between">
-              <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+              <div className="absolute right-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
                 <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="absolute -inset-0.5" />
@@ -38,7 +38,7 @@ export default function Example() {
               <div className="flex flex-shrink-0 items-center">
                 <img
                   className="h-[54px] w-auto"
-                  src="/betalabsLogo.png"
+                  src="images/betalabsLogo.png"
                   alt="Your Company"
                 />
                 <h1 className="mx-5 text-[20px] font-inter font-medium" style={{ color: "white" }}>
@@ -77,7 +77,7 @@ export default function Example() {
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 <Link
                   to="/signup"
-                  className="font-inter rounded-md bg-[#1205A4] px-4 py-2 text-[18px] font-medium text-white hover:bg-[#1205a4a5]"
+                  className="hidden md:block font-inter rounded-md bg-[#1205A4] px-4 py-2 text-[18px] font-medium text-white hover:bg-[#1205a4a5]"
                 >
                   Join Our Community
                 </Link>
@@ -86,7 +86,7 @@ export default function Example() {
           </div>
 
           <Disclosure.Panel className="sm:hidden">
-            <div className="space-y-1 px-2 pb-3 pt-2">
+            <div className="fixed right-0 z-50 w-full h-full bg-black mt-[75px]">
               {navigation.map((item) => (
                 <Disclosure.Button
                   key={item.name}

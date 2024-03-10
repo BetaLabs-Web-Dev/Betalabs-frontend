@@ -1,6 +1,6 @@
 import React from "react";
-import NavBar from "../NavBar/NavBar";
-import { Footer } from "../Footer/Footer";
+import NavBar from "../components/NavBar/NavBar";
+import { Footer } from "../components/Footer/Footer";
 
 class Layout extends React.Component {
   render() {

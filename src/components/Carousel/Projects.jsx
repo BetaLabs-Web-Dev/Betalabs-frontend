@@ -13,12 +13,12 @@ function Projects() {
   return (
     <>
       <div className="Slider m-[20px]">
-        <h1 className="text-[3vw] text-[#01DEDE] font-semibold m-8">Projects</h1>
+        <h1 className="text-[48px] text-[#01DEDE] font-semibold m-8">Projects</h1>
         <div>
           <Carousel showStatus={false} showIndicators={false}>
             {images.map((image, key) => (
-              <div key={key}>
-                <img src={image} alt={`Slide ${key + 1}`} />
+              <div key={key} className="">
+                <img src={`images/${image}`} alt={`Slide ${key + 1}`} />
               </div>
             ))}
           </Carousel>

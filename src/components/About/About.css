@@ -1,0 +1,6 @@
+.learn-more-btn{
+    border: #1205A4 3px solid;
+}
+.learn-more-btn:hover{
+    box-shadow: #1205A4 0px 0px 15px;
+}

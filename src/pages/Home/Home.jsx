@@ -3,12 +3,14 @@ import Hero from '../../components/Hero/Hero';
 import MeetTheTeam from '../../components/MeetTheTeam/MeetTheTeam';
 import Projects from '../../components/Carousel/Projects';
 import GetInTouch from '../../components/GetInTouch/GetInTouch';
+import About from '../../components/About/About';
 
 
 const Home = () => {
   return (
     <div>
       <Hero />
+      <About />
       <MeetTheTeam />
       <Projects />
       <GetInTouch />
