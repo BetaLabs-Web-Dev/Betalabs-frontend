@@ -1,9 +1,9 @@
-import { Fragment } from "react";
-import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Disclosure } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Link } from "react-router-dom";
 
 const navigation = [
-  { name: "Home", href: "#", current: true },
+  { name: "Home", href: "/", current: true },
   { name: "About Us", href: "#", current: false },
   { name: "Events", href: "#", current: false },
   { name: "Projects", href: "#", current: false },
@@ -20,7 +20,7 @@ export default function Example() {
     <Disclosure as="nav" className="">
       {({ open }) => (
         <>
-          <div className="mx-auto px-2 sm:px-6 lg:px-8">
+          <div className="mx-auto p-2 sm:px-6 lg:px-8 fixed w-full z-10">
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
@@ -37,27 +37,27 @@ export default function Example() {
 
               <div className="flex flex-shrink-0 items-center">
                 <img
-                  className="h-13 w-auto"
-                  src="./betalabsLogo.png"
+                  className="h-[54px] w-auto"
+                  src="/betalabsLogo.png"
                   alt="Your Company"
                 />
-                <h3 className="mx-5" style={{ color: "white" }}>
+                <h1 className="mx-5 text-[20px] font-inter font-medium" style={{ color: "white" }}>
                   BETA LABS
-                </h3>
+                </h1>
               </div>
 
               <div
-                style={{ backgroundColor: "#01022C", borderRadius: "30px" }}
-                className="hidden sm:ml-6 sm:block sm:rounded-bl-full"
+                style={{ backgroundColor: "#01022C", borderRadius: "25px" }}
+                className="hidden sm:ml-6 md:block sm:rounded-full"
               >
-                <div className="flex space-x-4 rounded-bl-full">
+                <div className="flex space-x-4 rounded-full">
                   {navigation.map((item) => (
-                    <a
+                    <Link
                       key={item.name}
-                      href={item.href}
+                      to={item.href}
                       style={
                         item.current
-                          ? { color: "#ED4951", borderRadius: "30px" }
+                          ? { color: "#ED4951", borderRadius: "25px" }
                           : { borderRadius: "30px" }
                       }
                       className={classNames(
@@ -69,18 +69,18 @@ export default function Example() {
                       aria-current={item.current ? "page" : undefined}
                     >
                       {item.name}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </div>
 
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                <a
-                  href="#"
-                  className="customBtn rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                <Link
+                  to="/signup"
+                  className="font-inter rounded-md bg-[#1205A4] px-4 py-2 text-[18px] font-medium text-white hover:bg-[#1205a4a5]"
                 >
-                  Sign Up
-                </a>
+                  Join Our Community
+                </Link>
               </div>
             </div>
           </div>

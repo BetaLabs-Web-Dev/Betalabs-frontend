@@ -1,9 +1,5 @@
-.title {
-  font-size: 18vh;
-  background: -webkit-linear-gradient(#00dede, #1500ff);
-  -webkit-background-clip: text;
+.hero-title {
+  background: linear-gradient(90deg, #00DEDE 27.1%, #1500FF 100%);
+  background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-.customBtn {
 }

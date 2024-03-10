@@ -1,76 +1,42 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-.container {
-  font-family: Poppins;
-  min-width: 100vw;
-  background-color: #d6d6d6;
-  padding-bottom: 5vh;
+
+input{
+    background-color: transparent;
+    border-bottom: 1px solid #01dede;
+    color: #01dede;
+    outline: none;
+    font-size: 18px;
 }
-.wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.title {
-  font-weight: 600;
-  font-size: 66px;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-}
-input,
-label {
-  display: block;
-  color: grey;
-}
-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+textarea{
+    background-color: transparent;
+    border-bottom: 1px solid #01dede;
+    color: #01dede;
+    outline: none;
+    font-size: 18px;
+    overflow: hidden;
 }
 
-input {
-  border: none;
-  border-bottom: 2px solid grey;
-  background-color: #d6d6d6;
-  font-family: Poppins;
-  font-weight: 500;
+.git-clear{
+    border: #01dede 2px solid;
+    transition: all 0.1s ease-in;
 }
-label {
-  font-size: 2vh;
-  font-weight: 500;
+.git-clear:hover{
+    box-shadow: #01dede 0px 0px 20px;
 }
-input:focus {
-  outline: none;
-  border-bottom: 2px solid black;
+
+.git-submit{
+    background-color: #01dede;
+    color: black;
+    transition: all 0.1s ease-in;
 }
-.input-group {
-  &:focus-within {
-    label {
-      color: black;
-    }
-    input {
-      color: black;
-    }
-  }
-  margin-right: 20vh;
-  margin-top: 5vh;
+.git-submit:hover{
+    box-shadow: #01dede 0px 0px 20px;
 }
-input:focus + label {
-  color: black;
-}
-.message {
-  width: 88vh;
-}
-.btn {
-  float: right;
-  margin-top: 5vh;
-  margin-right: 20vh;
-  height: 5vh;
-  width: 10vh;
-  color: white;
-  font-family: Poppins;
-  font-size: 14px;
-  font-weight: 500;
-  background-color: black;
-  border-radius: 10px;
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #01dede;
+    transition: background-color 5000s ease-in-out 0s;
 }

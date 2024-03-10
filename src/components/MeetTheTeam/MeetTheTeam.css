@@ -8,22 +8,19 @@
 .container {
   width: 90%;
   margin: auto;
-  background-color: #000;
 }
 
 .cards-container {
   display: flex;
   border-radius: 6px;
   color: #333;
-  background: #000;
   padding: 1rem;
-  box-shadow: 0 0 1rem #000 inset;
   overflow-x: auto;
   position: relative;
+}
 
-  &::-webkit-scrollbar {
-    display: none;
-  }
+.cards-container::-webkit-scrollbar {
+  display: none;
 }
 
 .card {
@@ -34,23 +31,22 @@
   overflow: hidden;
   cursor: pointer;
   transition: all 250ms ease-in-out;
+}
 
-  img {
-    height: 65vh;
-    object-fit: center;
-  }
+.card img {
+  height: 65vh;
+  object-fit: center;
+}
 
-  &:hover {
-    box-shadow: 0 4px 1rem -4px #000;
-    transform: translateY(-25px);
-  }
+.card:hover {
+  box-shadow: 0 4px 1rem -4px #000;
+  transform: translateY(-25px);
 }
 
 .heading {
   margin-top: 4vh;
   font-size: 6vh;
   text-align: center;
-  background-color: #000;
   color: gray;
   font-family: "font-poppins";
 }

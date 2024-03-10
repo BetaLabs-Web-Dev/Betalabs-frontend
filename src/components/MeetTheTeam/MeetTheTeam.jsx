@@ -67,9 +67,8 @@ const MeetTheTeam = () => {
   ];
 
   return (
-    <div className="container">
-      <h1 className="text-4xl heading font-poppins">Meet The Beta Labs Team</h1>
-
+    <div className="flex flex-col items-center m-[20px] my-10">
+      <h1 className="text-[3vw] text-[#01DEDE] font-semibold m-3">Our Team</h1>
       <CardContainer cards={cardsData} />
     </div>
   );
