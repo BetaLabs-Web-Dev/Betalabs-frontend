@@ -8,6 +8,7 @@ module.exports = {
       fontFamily: {
         'poppins': ['Poppins', 'sans-serif'],
         'prata': ['Prata', 'serif'],
+        'inter': ['Inter']
       },
       colors: {
         'custom-red': '#C65858',

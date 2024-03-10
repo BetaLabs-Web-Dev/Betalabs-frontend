@@ -1,0 +1,5 @@
+.hero-title {
+  background: linear-gradient(90deg, #00DEDE 27.1%, #1500FF 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

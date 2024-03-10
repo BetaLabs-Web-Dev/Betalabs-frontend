@@ -1,16 +1,15 @@
 import "./App.css";
-import NavBar from "./components/NavBar/NavBar";
 import Home from "./pages/Home/Home";
-import Projects from "./components/Carousel/Projects";
-import { Footer } from "./components/Footer/Footer";
+import Login from './pages/Login/Login';
+import { Route, Routes } from "react-router-dom";
 
 const App = () => {
   return (
-    <div className="bg-black font-poppins">
-      <NavBar />
-      <Home />
-      <Projects />
-      <Footer />
+    <div className="font-poppins">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/signup" element={<Login />} />
+      </Routes>
     </div>
   );
 };

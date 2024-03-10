@@ -1,0 +1,7 @@
+.join-btn{
+    box-shadow: none;
+    transition: all 0.1s ease-in-out;
+}
+.join-btn:hover{
+    box-shadow: #01dede 0px 0px 15px;
+}

@@ -1,0 +1,70 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.cards-container {
+  display: flex;
+  border-radius: 6px;
+  color: #333;
+  padding: 1rem;
+  overflow-x: auto;
+  position: relative;
+}
+
+.cards-container::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  flex: 1 0 35vh;
+  box-shadow: 0 1px 1rem -4px #000;
+  background: gray;
+  margin: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+}
+
+.card img {
+  height: 65vh;
+  object-fit: center;
+}
+
+.card:hover {
+  box-shadow: 0 4px 1rem -4px #000;
+  transform: translateY(-25px);
+}
+
+.heading {
+  margin-top: 4vh;
+  font-size: 6vh;
+  text-align: center;
+  color: gray;
+  font-family: "font-poppins";
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+@media screen and (max-width: 625px) {
+  .container {
+    width: 100%;
+  }
+
+  .cards-container {
+    padding: 0.5rem;
+  }
+
+  .card {
+    margin: 0.5rem;
+  }
+}
