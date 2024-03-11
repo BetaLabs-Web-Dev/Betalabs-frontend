@@ -11,7 +11,7 @@ function Projects() {
   ];
 
   return (
-    <>
+    <div id="projects">
       <div className="Slider m-[20px]">
         <h1 className="text-[48px] text-[#01DEDE] font-semibold m-8">Projects</h1>
         <div>
@@ -24,7 +24,7 @@ function Projects() {
           </Carousel>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

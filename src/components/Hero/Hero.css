@@ -1,5 +1,70 @@
+:root {
+  --steps: 16;
+  --background: linear-gradient(90deg, #00DEDE 27.1%, #1500FF 100%);
+}
+
 .hero-title {
-  background: linear-gradient(90deg, #00DEDE 27.1%, #1500FF 100%);
+  background: var(--background);
   background-clip: text;
+  background-size: contain;
   -webkit-text-fill-color: transparent;
+  position: relative;
+  opacity: 0;
+}
+
+.hero-title:nth-child(1) {
+  animation: animate-in 1.5s forwards;
+}
+
+.hero-title:nth-child(2) {
+  animation: animate-in 1.5s forwards;
+  animation-delay: 0.5s;
+}
+
+.hero-title:nth-child(3) {
+  animation: animate-in 1.5s forwards;
+  animation-delay: 1s;
+}
+
+.hero-desc {
+  opacity: 0;
+  animation: desc-animate-in 1s forwards;
+  animation-delay: 2s;
+}
+
+.joc-btn{
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  animation-delay: 2.5s;
+}
+
+
+@keyframes animate-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes desc-animate-in {
+  0% {
+    opacity: 0;
+    transform: translateY(+20%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
 }

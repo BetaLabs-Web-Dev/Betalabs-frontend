@@ -4,11 +4,10 @@ import { Link } from "react-router-dom";
 
 const navigation = [
   { name: "Home", href: "/", current: true },
-  { name: "About Us", href: "#", current: false },
-  { name: "Events", href: "#", current: false },
-  { name: "Projects", href: "#", current: false },
-  { name: "Gallery", href: "#", current: false },
-  { name: "Contact Us", href: "#", current: false },
+  { name: "About Us", href: "#about", current: false },
+  { name: "Events", href: "#events", current: false },
+  { name: "Projects", href: "#projects", current: false },
+  { name: "Contact Us", href: "#contact", current: false },
 ];
 
 function classNames(...classes) {
@@ -20,9 +19,9 @@ export default function Example() {
     <Disclosure as="nav" className="">
       {({ open }) => (
         <>
-          <div className="mx-auto p-2 sm:px-6 lg:px-8 fixed w-full z-10 bg-[#000E19]">
+          <div className="navbar mx-auto p-2 sm:px-6 lg:px-8 fixed w-full z-10 bg-[#000E19]">
             <div className="relative flex h-16 items-center justify-between">
-              <div className="absolute right-0 flex items-center sm:hidden">
+              <div className="absolute right-0 flex items-center md:hidden">
                 {/* Mobile menu button*/}
                 <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="absolute -inset-0.5" />
@@ -46,30 +45,16 @@ export default function Example() {
                 </h1>
               </div>
 
-              <div
-                style={{ backgroundColor: "#01022C", borderRadius: "25px" }}
-                className="hidden sm:ml-6 md:block sm:rounded-full"
-              >
-                <div className="flex space-x-4 rounded-full">
+              <div className="hidden sm:ml-6 md:block sm:rounded-full">
+                <div className="flex flex-row items-center gap-[3vw] text-[20px] font-medium">
                   {navigation.map((item) => (
-                    <Link
+                    <a
                       key={item.name}
-                      to={item.href}
-                      style={
-                        item.current
-                          ? { color: "#ED4951", borderRadius: "25px" }
-                          : { borderRadius: "30px" }
-                      }
-                      className={classNames(
-                        item.current
-                          ? "bg-gray-900 text-white"
-                          : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                        "rounded-md px-5 py-4 text-xl font-medium"
-                      )}
-                      aria-current={item.current ? "page" : undefined}
+                      href={item.href}
+                      className="text-gray-300 hover:text-white"
                     >
                       {item.name}
-                    </Link>
+                    </a>
                   ))}
                 </div>
               </div>
@@ -85,7 +70,7 @@ export default function Example() {
             </div>
           </div>
 
-          <Disclosure.Panel className="sm:hidden">
+          <Disclosure.Panel className="md:hidden">
             <div className="fixed right-0 z-50 w-full h-full bg-black mt-[75px]">
               {navigation.map((item) => (
                 <Disclosure.Button

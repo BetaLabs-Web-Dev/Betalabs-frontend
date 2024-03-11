@@ -8,4 +8,7 @@
 body {
   /* background: linear-gradient(to bottom, #000E19, #000000); */
   background-color: #000E19;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
 }
