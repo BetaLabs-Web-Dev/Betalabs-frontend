@@ -3,16 +3,12 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
 
 const navigation = [
-  { name: "Home", href: "/", current: true },
+  { name: "Home", href: "/", current: false },
   { name: "About Us", href: "#about", current: false },
   { name: "Events", href: "#events", current: false },
   { name: "Projects", href: "#projects", current: false },
   { name: "Contact Us", href: "#contact", current: false },
 ];
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
 
 export default function Example() {
   return (
@@ -77,13 +73,7 @@ export default function Example() {
                   key={item.name}
                   as="a"
                   href={item.href}
-                  className={classNames(
-                    item.current
-                      ? "bg-gray-900 text-white"
-                      : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                    "block rounded-md px-3 py-2 text-base font-medium"
-                  )}
-                  aria-current={item.current ? "page" : undefined}
+                  className="text-gray-300 block px-6 py-3 text-xl font-medium"
                 >
                   {item.name}
                 </Disclosure.Button>

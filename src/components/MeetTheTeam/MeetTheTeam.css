@@ -35,7 +35,7 @@
 }
 
 .card img {
-  height: 65vh;
+  height: 55vh;
   object-fit: center;
 }
 
@@ -67,5 +67,9 @@
 
   .card {
     margin: 0.5rem;
+  }
+
+  .card img {
+    height: 40vh;
   }
 }

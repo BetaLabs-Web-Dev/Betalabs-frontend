@@ -5,7 +5,7 @@ import { Route, Routes } from "react-router-dom";
 
 const App = () => {
   return (
-    <div className="font-poppins">
+    <div className="font-global">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/signup" element={<Login />} />

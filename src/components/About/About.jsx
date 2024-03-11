@@ -3,7 +3,7 @@ import './About.css';
 
 const About = () => {
     return (
-        <div id='about'>
+        <div id='about' className='pt-5'>
             <div className="relative flex flex-col md:flex-row mt-[15vw] md:m-[9vw] gap-[50px] md:gap-0 md:justify-between font-poppins items-center">
                 <div className="relative">
                     <img className='w-[50vw] md:w-[30vw]' src="images/image1.png" alt="" />

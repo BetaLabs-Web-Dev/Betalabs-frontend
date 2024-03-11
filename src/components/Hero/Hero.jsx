@@ -1,16 +1,27 @@
+import { useState } from "react";
 import "./Hero.css";
 import { Link } from "react-router-dom";
 
 export default function Example() {
+  const [showBackkground, setBackground] = useState(true);
+  const handlePlay = () => {
+    setBackground(false);
+  }
   return (
     <div
-      style={{
+      style={showBackkground ? {
         backgroundImage: `url(./images/background.png)`,
         backgroundSize: "cover",
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
-      }}
+      } : {}}
+      className="relative"
     >
+      <div className="absolute opacity-30">
+        <video autoPlay muted loop onPlay={handlePlay}>
+          <source src="/videos/background-video.mp4" />
+        </video>
+      </div>
       <div className="relative isolate px-[6vw] py-[25vh]">
         <div className="font-poppins w-[80vw] md:w-[62vw]">
           <div className="flex flex-col items-start text-left gap-8">
