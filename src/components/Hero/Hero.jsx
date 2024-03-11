@@ -1,12 +1,19 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Hero.css";
 import { Link } from "react-router-dom";
 
 export default function Example() {
-  const [showBackkground, setBackground] = useState(true);
+  const [showBackkground, setBackground] = useState(false);
   const handlePlay = () => {
     setBackground(false);
   }
+  useEffect(() => {
+    if (window.innerWidth < 600) {
+      setBackground(true);
+    }
+
+  }, []);
+
   return (
     <div
       style={showBackkground ? {
@@ -17,7 +24,7 @@ export default function Example() {
       } : {}}
       className="relative"
     >
-      <div className="absolute opacity-30">
+      <div className="absolute opacity-30 hidden md:block">
         <video autoPlay muted loop onPlay={handlePlay}>
           <source src="/videos/background-video.mp4" />
         </video>
