@@ -42,7 +42,7 @@ export default function Example() {
               </div>
 
               <div className="hidden sm:ml-6 md:block sm:rounded-full">
-                <div className="flex flex-row items-center gap-[3vw] text-[20px] font-medium">
+                <div className="flex flex-row items-center gap-[3vw] text-[20px] font-medium font-global">
                   {navigation.map((item) => (
                     <a
                       key={item.name}

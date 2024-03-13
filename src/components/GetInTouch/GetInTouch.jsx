@@ -8,7 +8,7 @@ const GetInTouch = () => {
 
   return (
     <div id="contact">
-      <div className="flex flex-col items-center text-[#01DEDE] font-poppins p-10 mb-10">
+      <div className="flex flex-col items-center text-[#01DEDE] font-global p-10 mb-10">
         <div className="py-10">
           <h1 className="text-[48px] text-[#01DEDE] font-semibold">GET IN TOUCH</h1>
         </div>

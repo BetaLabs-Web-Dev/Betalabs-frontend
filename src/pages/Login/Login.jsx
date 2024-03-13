@@ -12,7 +12,7 @@ const Login = () => {
 
   return (
     <div className='p-[150px]'>
-      <div className="flex flex-col items-center font-poppins text-[18px] text-[#01dede]">
+      <div className="flex flex-col items-center font-global text-[18px] text-[#01dede]">
         <form className='login-form flex flex-col gap-[50px] items-center' onSubmit={handleSubmit}>
           <div className='flex flex-col w-[300px]'>
             <label htmlFor='name'>Full Name</label>
@@ -26,7 +26,7 @@ const Login = () => {
             <label htmlFor="Phnno">Whatsapp No.</label>
             <input type="text" id="Phnno" />
           </div>
-          <button type="submit" className='join-btn text-[#01dede] text-[20px] font-semibold px-10 py-1 rounded-md'>Join</button>
+          <button type="submit" className='join-btn font-inter text-[#01dede] text-[20px] font-semibold px-10 py-1 rounded-md'>Join</button>
         </form>
       </div>
     </div>
