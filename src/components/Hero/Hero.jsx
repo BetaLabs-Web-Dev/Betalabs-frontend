@@ -30,9 +30,9 @@ export default function Example() {
         </video>
       </div>
       <div className="relative isolate px-[6vw] py-[25vh]">
-        <div className="font-poppins w-[80vw] md:w-[62vw]">
+        <div className="font-global w-[80vw] md:w-[62vw]">
           <div className="flex flex-col items-start text-left gap-8">
-            <div className="font-medium text-[7vw] md:text-[5vw] leading-snug">
+            <div className="font-medium text-[7vw] md:text-[4.8vw] leading-snug">
               <h1 className="hero-title" data-text="WELCOME TO THE">
                 WELCOME TO THE
               </h1>
@@ -44,9 +44,7 @@ export default function Example() {
               </h1>
             </div>
             <p className="hero-desc text-[14px] md:text-[1.4vw] text-white">
-              “Lorem ipsum dolor sit amet consectetur. Malesuada phasellus
-              auctor diam senectus viverra arcu arcu volutpat. Posuere amet a
-              enim aliquam vulputate non.”
+              “BetaLabs : A dynamic community to explore the endless possibilities of technology.”
             </p>
             <div className="flex items-center justify-center gap-x-6">
               <Link

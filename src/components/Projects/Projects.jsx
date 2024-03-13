@@ -11,11 +11,11 @@ function Projects() {
   ];
 
   return (
-    <div id="projects">
-      <div className="Slider m-[20px]">
-        <h1 className="text-[48px] text-[#01DEDE] font-semibold m-8">Projects</h1>
+    <div id="projects" className="w-fit md:w-[60vw] flex m-auto">
+      <div className="text-center m-[20px]">
+        <h1 className="text-[48px] text-[#01DEDE] font-semibold">Projects</h1>
         <div>
-          <Carousel showStatus={false} showIndicators={false}>
+          <Carousel showStatus={false} showIndicators={true} showArrows={false} infiniteLoop={true} emulateTouch={true}>
             {images.map((image, key) => (
               <div key={key} className="">
                 <img src={`images/${image}`} alt={`Slide ${key + 1}`} />
